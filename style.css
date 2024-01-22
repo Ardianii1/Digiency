@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
    --primary-color: rgba(255, 83, 0, 1);
    --background-color: #fff7f4;
@@ -11,10 +12,6 @@
    --padding-right: 135px;
    --section-width: calc(1440px - 135px - 135px);
 }
-/* * {
-   margin: 0;
-   padding: 0;
-} */
 
 body {
    padding: 0;
@@ -40,7 +37,7 @@ body {
 .section {
    position: relative; /* Add this to make z-index work */
    z-index: 1;
-   width: 1177px;
+   width: 1249px;
    padding-top: var(--padding-top);
    padding-bottom: var(--padding-bottom);
    padding-left: var(--padding-left);
@@ -97,7 +94,7 @@ body {
    /* padding-bottom: var(--padding-bottom); */
    display: flex;
    justify-content: center;
-   align-items: center;
+   /* align-items: center; */
    flex-direction: column;
 }
 
@@ -490,24 +487,26 @@ body {
    height: 60px;
    padding-right: 51px;
 }
-.case-study-content_body > ul > li{
-   
+.case-study-content_body > ul > li {
+   min-width: 110px;
+   padding-left: 10px;
+   padding-right: 10px;
 }
-.case-study-content_body > ul > button {
-   /* display: flex;
+.case-study-content_body > ul > .active {
+   display: flex;
    text-align: center;
-   justify-content: center ;
-   align-items: center; */
-   width: 126px;
+   justify-content: center;
+   align-items: center;
    height: 60px;
-   top: 113px;
+   /* top: 113px; */
    border-radius: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
 
    /* display: flex; */
    border-radius: 10px;
    border: 1px var(--primary-color);
    background: var(--primary-color);
-   width: 126px;
    /* height: 60px; */
    flex-shrink: 0;
    color: var(--Whit, #fff);
@@ -519,9 +518,35 @@ body {
    line-height: 30px; /* 150% */
    white-space: nowrap;
 
-  /* Control what happens if the text overflows the container */
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
+   /* Control what happens if the text overflows the container */
+   /* overflow: hidden; */
+   /* text-overflow: ellipsis; */
+}
+.case-study-content_body > ul > li:hover {
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   height: 60px;
+   top: 113px;
+   border-radius: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
+
+   /* display: flex; */
+   border-radius: 10px;
+   border: 1px var(--primary-color);
+   background: var(--primary-color);
+   /* height: 60px; */
+   flex-shrink: 0;
+   color: var(--Whit, #fff);
+   cursor: pointer;
+   font-family: Poppins;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 30px; /* 150% */
+   white-space: nowrap;
 }
 
 .case-study-content_body > ul {
@@ -530,6 +555,7 @@ body {
 
    display: flex;
    align-items: center;
+   gap: 30px;
    justify-content: space-between;
    list-style: none;
 }
@@ -643,18 +669,38 @@ body {
    background-color: var(--primary-color);
    transform: translateY(-50%);
 }
-
+.clients-content_body {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   width: 1170px;
+   height: 271px;
+   position: relative;
+}
+.slider-item_body {
+   /* display: flex; */
+   /* position: relative; */
+}
 .slider-container {
+   /* position: relative; */
    overflow: hidden;
+   width: 1170px;
+   /* position: relative; */
+   /* overflow: hidden; */
+   /* padding: 0 15px; */
+   padding-right: -30px;
 }
 
 .slider-wrapper {
    /* padding-left: 150px; */
    /* padding-right: 150px; */
    /* width: calc(100% / 3 +25px); */
-   position: relative;
+   /* position: relative; */
    display: flex;
-   align-items: center;
+   /* width: 1170px; */
+   width: 100%;
+   /* gap: 30px; */
    /* gap: 5px; */
    /* overflow: hidden; */
 
@@ -662,12 +708,14 @@ body {
 }
 
 .slider-item {
-   /* flex: 0 0 calc(100% / 3); */
+   /* flex: 0 0 30.33%; */
    border-radius: 10px;
    background: var(--Whit, #fff);
    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
    box-sizing: border-box;
    padding: 25px 25px 24px 25px;
+   width: 370px;
+   height: 270px;
    margin-right: 30px;
 }
 .slider-item_paragraph {
@@ -709,6 +757,7 @@ body {
 
 .prev-button {
    margin-left: -64px;
+   left: 0;
    /* margin-left: -80px; */
    height: 50px;
    width: 50px;
@@ -718,7 +767,7 @@ body {
 }
 
 .next-button {
-   margin-right: 64px;
+   margin-right: -72px;
    width: 50px;
    right: 10px;
    /* margin-right: -80px; */
@@ -1045,7 +1094,7 @@ p {
 .blogs_div-spans {
    width: 100%;
    display: flex;
-   gap: 20px;
+   /* gap: 20px; */
    /* justify-content: space-between; */
    align-items: center;
 }
@@ -1055,7 +1104,7 @@ p {
 }
 .blogs_div-spans_p > span {
    color: var(--Black, #373737);
-   width: 84pxpx;
+   /* width: 110px; */
    font-family: "Work Sans";
    font-size: 10.24px;
    font-style: normal;
@@ -1220,12 +1269,8 @@ h1 {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background: linear-gradient(
-         0deg,
-         rgba(0, 0, 0, 0.95) 0%,
-         rgba(0, 0, 0, 0.95) 100%
-      ),
-      url(<path-to-image>), lightgray 50% / cover no-repeat;
+   background: 
+      url(assets/footer-bg.png), lightgray 50% / cover no-repeat;
 }
 .footer {
    padding-top: 66px;
@@ -1359,3 +1404,142 @@ h1 {
    width: 36px;
    height: 36px;
 }
+
+@media (max-width: 1024px) {
+   :root {
+      --padding-top: 100px;
+      --padding-bottom: 100px;
+      --padding-left: 100px;
+      /* --padding-right: 100px; */
+   }
+   .container{
+      width: 1000px;
+      padding-left: 100px;
+      /* padding-right: var(--padding-right); */
+   }
+   .section{
+      /* width: 1000px; */
+      width: 100%;
+      /* display: flex; */
+      justify-content: start;
+      align-items: center;
+      padding-left: 100px;
+      padding-right: 100px;
+   }
+   .menu-div{
+      display: flex;
+      /* width: 100%; */
+      padding-right: 100px;
+      width: 1000px;
+      flex-direction: column;
+   }
+   .menu-menu{
+      display: flex;
+      justify-content: start;
+   }
+   .menu-links{
+      padding-left: 100px;
+   }
+   .menu-links > button{
+      display: none;
+   }
+   .menu-text{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+   }
+   .burger-menu{
+      display: none;
+   }
+   /* .lets-talk{
+      display: none;
+   } */
+}
+/* .burger-menu{
+   display: none;
+} */
+
+@media only screen and (min-width: 769px) {
+   .burger-menu{
+      display: none;
+   }
+   /* .lets-talk{
+      display: none;
+   } */
+}
+@media only screen and (max-width: 768px) {
+   .menu-links {
+        display: none;
+    }
+
+    .menu-links.active {
+        display: block;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+/* Add this media query for iPad Mini */
+/* @media only screen and (max-width: 768px) {
+   :root {
+      --medium-padding-top: 80px;
+      --medium-padding-bottom: 80px;
+      --medium-padding-left: 15px;
+      --medium-padding-right: 15px;
+      --medium-section-width: calc(100% - 30px);
+   }
+
+   .section {
+      padding-left: var(--medium-padding-left);
+      padding-right: var(--medium-padding-right);
+   }
+
+   .menu-menu {
+      display: flex;
+   }
+
+   .heading1 {
+      width: 100%;
+   }
+
+   .menu-text {
+      margin-top: 50px;
+   }
+
+   .menu-text > div > button {
+      width: 100%;
+   }
+
+   .our-services,
+   .services {
+      padding: 60px 15px;
+   }
+
+   .services-content {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+   .clients-content_head_h1,
+   .blog-content_head_h1 {
+      width: 100%;
+   }
+
+   .blogs_div > div > h1 {
+      width: 100%;
+   }
+
+   .blogs_div > div > button {
+      width: 100%;
+   }
+
+   .newsletter {
+      padding: 20px;
+   }
+
+   .newsletter-text,
+   .newsletter-input {
+      width: 100%;
+   }
+} */
